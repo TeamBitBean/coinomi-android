@@ -217,7 +217,7 @@ public class Constants {
             new CoinAddress(IxcoinMain.get(),       new ServerAddress("ixc-cce-1.coinomi.net", 5047),
                                                     new ServerAddress("ixc-cce-2.coinomi.net", 5047)),
 	        new CoinAddress(BitbeanMain.get(),	    new ServerAddress("electrum1.bitbean.org", 5088),
-						                            new ServerAddress("electrum2.bitbean.org", 5088))
+                                                    new ServerAddress("electrum2.bitbean.org", 5088))
     );
 
     public static final HashMap<CoinType, Integer> COINS_ICONS;
@@ -324,7 +324,7 @@ public class Constants {
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
             BitbeanMain.get(),
             BitcoinMain.get(),
-	        AsiacoinMain.get(),
+            AsiacoinMain.get(),
             AuroracoinMain.get(),
             BatacoinMain.get(),
             BlackcoinMain.get(),
