@@ -47,6 +47,7 @@ import com.coinomi.core.coins.VertcoinMain;
 import com.coinomi.core.coins.VpncoinMain;
 import com.coinomi.core.coins.RichcoinMain;
 import com.coinomi.core.coins.IxcoinMain;
+import com.coinomi.core.coins.BitbeanMain;
 import com.coinomi.core.network.CoinAddress;
 import com.coinomi.stratumj.ServerAddress;
 import com.google.common.collect.ImmutableList;
@@ -214,7 +215,9 @@ public class Constants {
             new CoinAddress(RichcoinMain.get(),     new ServerAddress("richx-cce-1.coinomi.net", 5046),
                                                     new ServerAddress("richx-cce-2.coinomi.net", 5046)),
             new CoinAddress(IxcoinMain.get(),       new ServerAddress("ixc-cce-1.coinomi.net", 5047),
-                                                    new ServerAddress("ixc-cce-2.coinomi.net", 5047))
+                                                    new ServerAddress("ixc-cce-2.coinomi.net", 5047)),
+	    new CoinAddress(BitbeanMain.get(),	    new ServerAddress("electrum1.bitbean.org", 5088)),
+						    new ServerAddress("electrum2.bitbean.org", 5088))
     );
 
     public static final HashMap<CoinType, Integer> COINS_ICONS;
@@ -264,6 +267,7 @@ public class Constants {
         COINS_ICONS.put(CoinID.CLUBCOIN_MAIN.getCoinType(), R.drawable.clubcoin);
         COINS_ICONS.put(CoinID.RICHCOIN_MAIN.getCoinType(), R.drawable.richcoin);
         COINS_ICONS.put(CoinID.IXCOIN_MAIN.getCoinType(), R.drawable.ixcoin);
+	COINS_ICONS.put(CoinID.BITBEAN_MAIN.getCoinType(), R.drawable.bitbean);
 
         COINS_BLOCK_EXPLORERS = new HashMap<CoinType, String>();
         COINS_BLOCK_EXPLORERS.put(CoinID.BITCOIN_MAIN.getCoinType(), "https://blockchain.info/tx/%s");
@@ -306,6 +310,7 @@ public class Constants {
         COINS_BLOCK_EXPLORERS.put(CoinID.EGULDEN_MAIN.getCoinType(), "https://chainz.cryptoid.info/efl/tx.dws?%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.RICHCOIN_MAIN.getCoinType(), "https://explorer.richcoin.us/transaction?transaction=%s");
         COINS_BLOCK_EXPLORERS.put(CoinID.IXCOIN_MAIN.getCoinType(), "https://chainz.cryptoid.info/ixc/tx.dws?%s");
+	COINS_BLOCK_EXPLORERS.put(CoinID.BITBEAN_MAIN.getCoinType(), "https://chains.cryptoid.info/bitb/tx.dws?%s");
     }
 
     public static final CoinType DEFAULT_COIN = BitcoinMain.get();
@@ -318,6 +323,7 @@ public class Constants {
 
     public static final List<CoinType> SUPPORTED_COINS = ImmutableList.of(
             BitcoinMain.get(),
+	    BitbeanMain.get(),
             AsiacoinMain.get(),
             AuroracoinMain.get(),
             BatacoinMain.get(),
